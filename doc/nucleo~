@@ -1,0 +1,29 @@
+Manual del Nucleo
+-------------------------------------------------
+
+LLamar al nucleo
+----------------
+[]$ nucleo [Parametro1] [Parametro2] [Parametro3] [Parametro4]
+
+[Parametro1]: Este puede contener la ruta del archivo de pseudocódigo, el parametro de Ayuda, el parametro --version.
+
+[Parametro2]: Este debe contener el archivo de salida.
+
+[Parametro3]: (Opcional), aqui se coloca la ruta completa del diccionario, si no se coloca la ruta se tomara el diccionario predeterminado, aqui también puede ir el parametro --log
+
+[Parametro4]: (Opcional), aqui se podra poner el parametro --log
+
+Definición de Parametros:
+-------------------------
+--Version: Imprime en la pantalla la versión, la fecha de compilación y la plataforma del nucleo
+
+--Log: Genera un archivo de logs para las operaciones realizadas
+
+Manunidades: Muestra la ayuda de las unidades
+
+Manconceptos: Muestra los conceptos básicos de programación
+
+ManReglas: Muestra la ayuda del formato de archivo de diccionarios
+
+Manpseudocodigo: Muestra la ayuda del pseudocódigo
+

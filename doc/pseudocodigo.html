@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>Ayuda Pseudocodigo a Pascal</title>
+</head>
+<body>
+<table style="text-align: left; width: 1006px; height: 511px;"
+ border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td
+ style="background-color: rgb(51, 204, 255); height: 50px; vertical-align: top;">PSEUDOC&Oacute;DIGO
+DE LA UNPSJB (UNIV. NAC. de la PATAGONIA SAN JUAN BOSCO)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">1.0
+Estructura General de un Programa</span><br>
+      <br>
+      <br>
+&nbsp; <span style="font-weight: bold;">Programa</span>
+&lt;Identificador&gt;<br>
+      <br>
+&nbsp; <span style="font-weight: bold;">Usar</span><br>
+&nbsp; &lt;Unidades&gt;<br>
+      <br>
+&nbsp; <span style="font-weight: bold;">Constantes</span><br>
+&nbsp; &lt;Identificador&gt;=Tipo_Dato<br>
+      <br>
+&nbsp; <span style="font-weight: bold;">Tipos</span><br>
+&nbsp; &lt;Identificador&gt;=ARREGLO [Init..Tope] de Tipo_Dato<br>
+&nbsp; &lt;Identificador&gt;=ARCHIVO DE Tipo_Dato<br>
+      <br>
+      <span style="font-weight: bold;">&nbsp; Variables</span><br>
+&nbsp; &lt;identificador&gt;:Tipo_Dato<br>
+      <br>
+&nbsp; <span style="font-weight: bold;">Procedimiento</span>
+&lt;Identificador&gt; ([var] &lt;Identificador&gt;:Tipo_Dato;[var]
+&lt;Identificador&gt;)<br>
+&nbsp;&nbsp; [<span style="font-weight: bold;">Variables</span>]<br>
+&nbsp;&nbsp; <span style="font-weight: bold;">Comienza</span><br>
+&nbsp;&nbsp; <span style="font-weight: bold;">termina</span><br>
+&nbsp;<br>
+&nbsp; <span style="font-weight: bold;">Funcion</span>
+&lt;Identificador&gt;
+(&lt;Identificador&gt;:Tipo_Dato;&lt;Identificador&gt;:Tipo_Dato):Tipo_Dato<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp; Comienza</span><br>
+&nbsp;&nbsp; <span style="font-weight: bold;">termina</span><br>
+&nbsp;<br>
+&nbsp; <span style="font-weight: bold;">Comienza</span><br>
+&nbsp; <span style="font-weight: bold;">Fin</span><br>
+      <br>
+      <span style="font-weight: bold;">2.0 Instrucciones</span><br>
+&nbsp; 2.1 LEER<br>
+&nbsp;&nbsp;&nbsp; Lee un valor de la entrada estandar<br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; DECLARACI&Oacute;N procedimiento Leer(var
+&lt;Identificador&gt;)<br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; EJEMPLO<br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">programa</span>
+Ejemplo<br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">variables</span><br>
+&nbsp;&nbsp;&nbsp; valor:Entero<br>
+&nbsp;&nbsp;&nbsp; <br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; comienza</span><br>
+&nbsp;&nbsp;&nbsp; Escribir ('Ingrese un valor del 1 al 10: ')<br>
+&nbsp;&nbsp;&nbsp; Leer(valor)<br>
+&nbsp;&nbsp;&nbsp; EscribirLinea(valor)<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; termina</span><br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp; 2.2 ESCRIBIR<br>
+&nbsp;&nbsp;&nbsp; Coloca un valor en la salida estandar.<br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; DECLARACI&Oacute;N procedimiento Escribir(var
+&lt;Identificador&gt;)<br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; EJEMPLO<br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; programa</span>
+ejemplo<br>
+&nbsp;&nbsp;&nbsp; <br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; comienza</span><br>
+&nbsp;&nbsp;&nbsp; Escribir ('hola mundo!')<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; termina</span><br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+      <br>
+&nbsp; 2.3 COMENTARIOS<br>
+&nbsp;&nbsp; // &lt;COMENTARIO&gt;<br>
+&nbsp; (* &lt;COMENTARIO&gt; *)<br>
+&nbsp; { &lt;COMENTARIO}<br>
+      <br>
+&nbsp; 2.4 ARCHIVO<br>
+&nbsp;&nbsp;&nbsp; Se utiliza para determinar el tipo de Archivo.<br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; EJEMPLO<br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; Programa</span>
+Ejemplo<br>
+&nbsp;&nbsp;&nbsp; <br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; Tipos</span><br>
+&nbsp;&nbsp;&nbsp; Arch_Texto=Archivo de Cadena<br>
+      <br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; variables</span><br>
+&nbsp;&nbsp;&nbsp; Arch1:Arch_Texto<br>
+&nbsp;&nbsp;&nbsp; aux:Cadena<br>
+&nbsp;&nbsp;&nbsp; <br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; Comienza</span><br>
+&nbsp;&nbsp;&nbsp; abrir(Arch1,'hola.txt')<br>
+&nbsp;&nbsp;&nbsp; lectura(Arch1)<br>
+&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">Mientras</span> <span
+ style="font-weight: bold;">No</span> Finde(Arch1) <span
+ style="font-weight: bold;">Hacer</span><br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; comienza</span><br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Leer(Arch1,aux)<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; escribirln(aux)<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; termina</span><br>
+&nbsp;&nbsp;&nbsp; cerrar(Arch1)<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; termina</span><br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp; 2.5 ARREGLO<br>
+&nbsp;&nbsp;&nbsp; Se utiliza para declarar Arreglos.<br>
+      <br>
+&nbsp;&nbsp;&nbsp; EJEMPLO<br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; Programa</span>
+Ejemplo<br>
+&nbsp;&nbsp;&nbsp; <br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; Tipos</span><br>
+&nbsp;&nbsp;&nbsp; Vector=<span style="font-weight: bold;">Arreglo </span>[1..56]
+      <span style="font-weight: bold;">de</span> Entero<br>
+&nbsp;&nbsp;&nbsp; Matriz=<span style="font-weight: bold;">Arreglo </span>[1..4,1..56]
+      <span style="font-weight: bold;">de</span> Entero<br>
+      <br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; variables</span><br>
+&nbsp;&nbsp;&nbsp; i,j:Entero<br>
+&nbsp;&nbsp;&nbsp; Vec:Vector<br>
+&nbsp;&nbsp;&nbsp; Mat:Matriz<br>
+&nbsp;&nbsp;&nbsp; <br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; comienza</span><br>
+&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">para</span>
+i&lt;-1 <span style="font-weight: bold;">Hasta</span> 56 <span
+ style="font-weight: bold;">Hacer</span><br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+comienza</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vec[i]&lt;-i<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; escribirln(vec[i])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+ style="font-weight: bold;">termina</span><br>
+&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">para</span>
+i&lt;-1 <span style="font-weight: bold;">hasta</span> 4 <span
+ style="font-weight: bold;">hacer</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">para</span>
+j&lt;-1 <span style="font-weight: bold;">hasta</span> 56 <span
+ style="font-weight: bold;">hacer</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mat[i,j]&lt;-j<br>
+&nbsp;<span style="font-weight: bold;">&nbsp;&nbsp; termina</span><br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+      <br>
+&nbsp; 2.6 ESCRIBIRLN<br>
+&nbsp;&nbsp; Se diferencia del Escribir en que este cuando coloca el<br>
+&nbsp;&nbsp; dato en la salida estandar hace un salto a la siguiente
+linea.<br>
+      <br>
+&nbsp;&nbsp; EJEMPLO<br>
+&nbsp;&nbsp; //////////////////////////////////////<br>
+&nbsp;<span style="font-weight: bold;">&nbsp; Programa</span> Ejemplo<br>
+&nbsp;&nbsp; <br>
+      <span style="font-weight: bold;">&nbsp;&nbsp; comienza</span><br>
+&nbsp;&nbsp; escribirln('Hola Mundo!!')<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp; termina</span><br>
+&nbsp;&nbsp; //////////////////////////////////////<br>
+&nbsp;&nbsp; <br>
+&nbsp; 2.7 ABRIR<br>
+&nbsp;&nbsp;&nbsp; Asigna un archivo a una variable<br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; EJEMPLO<br>
+&nbsp;&nbsp;&nbsp; ver 2.4<br>
+      <br>
+&nbsp; 2.8 LECTURA<br>
+&nbsp;&nbsp;&nbsp; Establece el Archivo para apertura de Solo Lectura<br>
+      <br>
+&nbsp;&nbsp;&nbsp; EJEMPLO<br>
+&nbsp;&nbsp;&nbsp; ver 2.4<br>
+      <br>
+&nbsp; 2.9 CERRAR<br>
+&nbsp;&nbsp;&nbsp; Cierra el Archivo<br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; EJEMPLO<br>
+&nbsp;&nbsp;&nbsp; ver 2.4<br>
+      <br>
+&nbsp; 2.10 ESCRITURA<br>
+&nbsp;&nbsp;&nbsp; Establece el Archivo para apertura de Escritura<br>
+      <br>
+&nbsp;&nbsp;&nbsp; EJEMPLO<br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">Programa</span>
+Ejemplo<br>
+&nbsp;&nbsp;&nbsp; <br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; Tipos</span><br>
+&nbsp;&nbsp;&nbsp; Arch_Texto=<span style="font-weight: bold;">Archivo
+de</span> Cadena<br>
+      <br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; variables</span><br>
+&nbsp;&nbsp;&nbsp; Arch1:Arch_Texto<br>
+&nbsp;&nbsp;&nbsp; aux:Cadena<br>
+&nbsp;&nbsp;&nbsp; <br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; Comienza</span><br>
+&nbsp;&nbsp;&nbsp; abrir(Arch1,'hola.txt')<br>
+&nbsp;&nbsp;&nbsp; Escritura(Arch1)<br>
+&nbsp;&nbsp;&nbsp; aux:='hola Mundo'<br>
+&nbsp;&nbsp;&nbsp; Escribir(Arch1,aux)<br>
+&nbsp;&nbsp;&nbsp; cerrar(Arch1)<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; termina</span><br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+      <br>
+      <span style="font-weight: bold;">3.0 Estructuras</span><br>
+      <br>
+&nbsp; 3.1.1 Estructura Condicional Si<br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; DECLARACI&Oacute;N:<br>
+&nbsp;&nbsp;&nbsp; SI Condicion ENTONCES<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;instrucciones&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sino &lt;Instrucciones&gt;<br>
+&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; EJEMPLO<br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; programa</span>
+ifton<br>
+&nbsp;&nbsp; <br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; variables</span><br>
+&nbsp;&nbsp;&nbsp; MeEnfermo:Logico<br>
+&nbsp;&nbsp; <br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; comienza</span><br>
+&nbsp;&nbsp;&nbsp; Escribir('Salis el s&aacute;bado? [s/n]')<br>
+&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">Si</span>
+LeerTecla='S' <span style="font-weight: bold;">entonces</span>
+Meenfermo&lt;-verdadero<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: bold;">
+Sino</span> MeEnfermo&lt;-falso<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; termina</span><br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+      <br>
+&nbsp; 3.1.2 Estructura Condicional Opcion<br>
+&nbsp; <br>
+&nbsp;&nbsp;&nbsp; DECLARACI&Oacute;N:<br>
+&nbsp;&nbsp;&nbsp; Opcion &lt;Identificador&gt; De<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &lt;Identificador o
+Cte&gt;:&lt;Instrucciones&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; termina opcion<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp; EJEMPLO<br>
+&nbsp;&nbsp; //////////////////////////////////////<br>
+&nbsp;&nbsp;&nbsp;<span style="font-weight: bold;"> programa</span>
+ifton<br>
+&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;<span style="font-weight: bold;"> variables</span><br>
+&nbsp;&nbsp;&nbsp; MeEnfermo:Logico<br>
+&nbsp;&nbsp; <br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; comienza</span><br>
+&nbsp;&nbsp;&nbsp; Escribir('Salis el s&aacute;bado? [s/n]')<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; Opcion</span>
+LeerTecla <span style="font-weight: bold;">de</span><br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'S':MeEnfermo&lt;-verdadero<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'N':MeEnfermo&lt;-falso<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; termina opcion</span><br>
+&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">termina</span><br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+      <br>
+&nbsp; 3.2.1 Estructura de Repeticion Para<br>
+      <br>
+&nbsp;&nbsp;&nbsp; DECLARACI&Oacute;N:<br>
+&nbsp;&nbsp;&nbsp; Para &lt;Identificador&gt;&lt;-&lt;Inicio&gt; HASTA
+&lt;tope&gt; Hacer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Instrucciones&gt;<br>
+      <br>
+&nbsp;&nbsp;&nbsp; EJEMPLO<br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">programa</span>
+ejemplo<br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">variables</span><br>
+&nbsp;&nbsp;&nbsp; i,FindeMes:entero<br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">comienza</span><br>
+&nbsp;&nbsp;&nbsp; FinDeMes&lt;-31<br>
+&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">Para</span>
+i&lt;-1 <span style="font-weight: bold;">hasta</span> FinDeMes <span
+ style="font-weight: bold;">hacer</span><br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">Si</span>
+LeerTecla='S' <span style="font-weight: bold;">entonces</span>
+Meenfermo&lt;-verdadero<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+ style="font-weight: bold;"> Sino</span> MeEnfermo&lt;-falso<br>
+&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">termina</span><br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+      <br>
+&nbsp; 3.2.2 Estructura de Repeticion Mientras<br>
+&nbsp; <br>
+&nbsp;&nbsp;&nbsp; DECLARACI&Oacute;N:<br>
+&nbsp;&nbsp;&nbsp; Mientras &lt;Condicion&gt; Hacer<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;Instrucciones&gt;<br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; EJEMPLO<br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">programa</span>
+ejemplo<br>
+&nbsp;&nbsp;&nbsp; <br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; variables</span><br>
+&nbsp;&nbsp;&nbsp; i,FindeMes:entero<br>
+&nbsp;&nbsp;&nbsp; <br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; comienza</span><br>
+&nbsp;&nbsp;&nbsp; FinDeMes&lt;-31<br>
+&nbsp;&nbsp;&nbsp; i&lt;-1<br>
+&nbsp;&nbsp;&nbsp;<span style="font-weight: bold;"> Mientras</span> i
+&lt;= FinDeMes <span style="font-weight: bold;">hacer</span><br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+comienza</span><br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">Si</span>
+LeerTecla='S' <span style="font-weight: bold;">entonces</span>
+Meenfermo&lt;-verdadero<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+ style="font-weight: bold;">Sino</span> MeEnfermo&lt;-falso<br>
+&nbsp;&nbsp;&nbsp; i&lt;-i+1<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; termina</span><br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; termina</span><br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+      <br>
+&nbsp; 3.2.2 Estructura de Repeticion Repetir<br>
+&nbsp; <br>
+&nbsp;&nbsp;&nbsp; DECLARACI&Oacute;N:&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">Repetir</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Instrucciones&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">Hasta</span>
+&lt;Condici&oacute;n&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; EJEMPLO<br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">programa </span>ejemplo<br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;<span style="font-weight: bold;">&nbsp;&nbsp; variables</span><br>
+&nbsp;&nbsp;&nbsp; i,FindeMes:entero<br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;<span style="font-weight: bold;">&nbsp;&nbsp; comienza</span><br>
+&nbsp;&nbsp;&nbsp; FinDeMes&lt;-31<br>
+&nbsp;&nbsp;&nbsp; i&lt;-1<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; Repetir</span><br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">Si</span>
+LeerTecla='S' <span style="font-weight: bold;">entonces</span>
+Meenfermo&lt;-verdadero<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+ style="font-weight: bold;">Sino</span> MeEnfermo&lt;-falso<br>
+&nbsp;&nbsp;&nbsp; i&lt;-i+1<br>
+&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">Hasta</span>
+i&lt;31<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; termina<br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+      <br>
+      </span></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+</body>
+</html>

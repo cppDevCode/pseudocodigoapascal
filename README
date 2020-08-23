@@ -1,0 +1,426 @@
+Leame de Pseudocodigo A Pascal
+
+------------------------------------------
+Copyright (C) 2006 Alejandro Lucas Baldrés, Nicolas Secreto
+------------------------------------------
+
+Este programa se entrega bajo Licencia GNU/GPL versión 2 
+(ver el archivo COPYING ANTES DE UTILIZAR EL PROGRAMA)
+
+Requisitos GUI
+--------------
+- Compilador de Pascal (opcional)
+- libgdk-pixbuf2
+
+Objetivo del Proyecto
+--------------------
+El objetivo de esta Herramienta es facilitar el aprendizaje de programacion via 
+la traducción del pseudocódigo en español a un Lenguaje de Programación Listo 
+para Compilar.
+
+Visión a Futuro
+---------------
+La visión a futuro de este proyecto es implementar los distintos Pseudocodigos 
+en español, permitiendo al usuario poder seleccionar cual más le convenga, a su
+ves de ir eliminando los bugs que pueda llegar a tener el programa. Implementar
+Una documentación lo suficientemente completa como para que el usuario neófito 
+en el ambito de la programación inicie sus primeros pasos...
+En un futuro cercano se le añadira la posibilidad de que corrija errores, 
+remarque las palabras reservadas y añadas diversas opciones, 
+entre las cuales este la opción de seleccionar el lenguaje de Salida :).
+
+Tambien se planea Desarrollarlo para otras plataformas como por ejemplo
+ Windows o PowerPC.
+
+Utilización del Programa
+------------------------
+1- llamarla con los parametros ej:
+  []$ nucleo /usr/share/pseudocodigoapascal/ejemplos/hola.pse /home/user/salida.pas ./datos/unp
+      [-ejecutable-][--pseudocodigo---] [-resultado-] [diccionario (optativo)]
+
+2- Doble clic en el ejecutable
+
+3- []$ pseudocodigoapascal
+[Esta orden ejecuta la GUI]
+
+Nota: Si desea que el programa guarde un log, añada el parametro --log
+
+Plataformas Soportadas
+----------------------
+ -Linux
+ 
+Otra Documentación
+------------------
+conceptos: Contiene los conceptos básicos
+nucleo: Contiene la ayuda de como utilizar el nucleo
+DocUnidades: Contiene la documentación de las unidades
+ArchivoReglas:Contiene el Formato del archivo de Regla
+Manpseudocodigo:Contiene un pequeño manual de los pseudocódigos
+Copying: Contiene la Licencia del PseudoTrans
+hola.pse: Es un ejemplo, Escrito en el pseudocodigo de la UNPSJB
+desarrollo: Contiene la explicación de por que se selecciono Freepascal y Lazarus
+AUTHORS: Contiene los creditos del proyecto
+BUGS: Contiene una lista de bugs conocidos y los equipos de prueba
+INSTALL: Contiene las instrucciones de instalación
+
+Numeración de Versión
+---------------------
+- El primer dígito es el principal, por ahora es 0, cuando se llegue a cumplir con
+las metas este se incrementará.
+
+- El segundo dígito indica el estado (0:alpha,1:Beta, 2:Release Candidate, 3:Stable)
+
+- El tercer dígito indica el número de release (publicación), si es 0 quiere decir
+que nunca se publicaron.
+
+- El cuarto dígito indica el número de construcción
+
+
+Update History Nucleo
+---------------------
+Versión 0.0.0.1
+ -Palabras Reservadas
+ 	-Archivo
+	-Arreglo
+	-Comienza
+	-De
+	-Entonces
+	-Escribir
+	-Hacer
+	-Hasta
+	-Fin
+	-Funcion
+	-Leer
+	-Para
+	-Procedimiento
+	-Programa
+	-Mientras
+	-Si
+	-Tipos
+	-Usar
+	-Var
+
+  -Tipos de Datos:
+	-Entero
+	-Real
+	-Cadena
+	-Caracter
+	-Logico
+
+  -OPERADORES LOGICOS
+	-NOT
+	-AND
+	-OR
+	-<>
+	->
+	-<
+	-=
+  -Operadores Aritmeticos
+        -:= (Asignacion);
+        -+
+        --
+        -/
+        -mod (modulo de la Division);
+        -*
+  - Funciones
+  	-Cualquiera de Pascal o Freepascal (En ingles);
+
+Versión 0.0.0.2
+  -Se optimizó el código
+  -Palabras Reservadas Agregadas
+	-Sino
+	-Repetir
+	-Escribirlinea
+	-Constantes
+	-Lectura
+	-Abrir
+
+Versión 0.0.0.3
+  -Palabras Reservadas Agregadas
+	-Opcion  	
+	
+Versión 0.0.0.6
+  -Se reprogramo el programa ;)
+
+-Pseudocodigo de la UNPSJB
+  -Palabras Reservadas Agregadas o Modificadas
+        -Archivo
+	-Abrir
+	-Arreglo
+	-Cerrar
+	-Comienza
+	-Constantes
+	-De
+	-Entonces
+	-Escribir
+	-Escribirln
+	-Hacer
+	-Hasta
+	-Funcion
+	-Leer
+	-Para
+	-Procedimiento
+	-Programa
+	-Repetir
+	-Registro
+	-Mientras
+	-Si
+	-Termina
+	-Termina Opcion
+	-Tipos
+	-Var
+	-Variables
+  	-Opcion
+	-Sino
+	
+  - Agregados para aumentar la funcionabilidad
+        -Usar (Para Agregar Unidades) :)
+        -Lectura (Para abrir archivos para lectura)
+        -Finde (Indica el fin de Archivo)
+        
+  -Tipos de Datos:
+	-Entero
+	-Real
+	-Cadena
+	-Caracter
+	-Logico
+	-Byte
+
+  -OPERADORES LOGICOS
+	-No
+	-Y
+	-O
+	-<>
+	->
+	-<
+	-=
+	-<= (Menor o igual)
+	->= (Mayor o igual)
+	
+  -Valores Lógicos
+  	-Verdadero
+  	-Falso
+  	
+  -Operadores Aritmeticos
+        -<- (Asignacion);
+        -+
+        --
+        -/
+        -mod (módulo de la División);
+	-div (división entera)
+        -*
+
+Versión 0.0.0.7          	
+  -Pseudocodigo de la UNPSJB
+    - Agregados para aumentar la funcionabilidad
+        -Escritura (Apertura de archivo para escritura)
+        -AgregarFinal(Agrega lineas al final del archivo)
+        -LeerTecla (Lee la tecla presionada)      
+
+    -Unidades 
+    	- Consola
+    -Funciones Predefinidas
+      -Unidad 'Consola'
+       	-LimpiarLinea
+	-LimpiarPantalla
+	-CursorGrande
+	-OcultarCursor
+	-MostrarCursor
+	-BorrarLinea
+	-IrA(x,y)
+	
+Versión 0.0.0.8
+  -Pseudocódigo de la UNPSJB
+    - Funciones Predefinidas
+      -Unidad 'Consola'
+      	- InsertarLinea
+	- TeclaPresionada
+	- FondoTxt
+	- ColorTxt
+	- Ventana
+	
+    -Constantes
+    	- Blanco
+    	- Negro
+    	- Verde
+	- Marron
+	- Celeste
+	- Rojo
+
+Versión 0.0.0.9
+  - Se ha optimizado el programa
+   (ahora las reglas de traducción se encuentran en un archivo dentro de la
+   carpeta datos);
+
+Versión 0.0.0.10
+ -Bug de localización de Archivos solucionado
+
+Versión 0.0.0.11
+ - Validación de Identificadores
+ - Indica el tamaño del Archivo Generado
+ - Interfaz Modificada
+ 
+Versión 0.0.0.12
+ - Interfaz Rediseñada (No me volví M$ cambiando nada más que la interfaz!!!, 
+ 			estoy pensando en los procedimientos nuevos :))
+
+Versión 0.0.0.13
+ - Cambio en el ingreso de los archivos
+  (ahora cuando ejecutas el programa (renombrado a core) debes incluir como primer
+  parametro el archivo en pseudocodigo y el nombre de salida);
+  ej: $:./nucleo hola.pse salida.pas
+
+Versión 0.0.0.14
+ - Solucionado el bug de que el usuario tenia que agregar los pto y coma (;)  y 
+ el pto (.) :)
+
+Versión 0.0.0.15
+ - Se agregaron algunas mejoras en el sistema de agregado de ; y .
+ - Se actualizo la documentación
+
+Versión 0.0.0.16
+ - Optimización del nucleo
+ 
+Versión 0.0.0.17
+ - Se Arreglo el agregado de Punto y coma.
+
+Versión 0.1.1.18
+ - Se Optimizó el Nucleo
+ - Se arreglarón Bugs 
+ - Interfaz simplificada
+ - Generación de Logs
+
+Versión 0.1.1.20
+ - Se arreglo bug de las rutas hacia los archivos
+
+Versión 0.1.1.22
+ - Se depuró el código
+ - Ahora no se tienen que agregar los parentesis por ejemplo en leer
+
+Versión 0.2.1.23
+ - Se mejoro la compatibilidad multiplataforma con win32
+ - Bug de Existencia de archivo solucionado y de inexistencia de archivo de salida
+
+Versión 0.2.1.25
+ - Se acomodo el agregado de los parentesis en la declaración de las cadenas
+
+Versión 0.2.1.27
+ - Se acomodo la validación de Existencia de Archivos
+ - Se agregó un nuevo parametro "--VERSION" este muestra la versión del nucleo, fecha de compilación y Plataforma
+
+Versión 0.2.1.28
+ - Se agrego un nuevo parametro de ayuda: "mannucleo"
+
+Versión 0.2.1.29
+ - Si no se escribe ningún parametro visualiza la ayuda del nucleo
+
+Versión 0.2.1.31
+ - Ahora si el usuario no declara las unidades las agrega de forma automatica
+
+Update History GUI
+------------------
+Versión 0.0.0.1
+ - Programa Gráfico
+
+Versión 0.0.0.2
+ - Bugs Solucionados
+ - Se agregaron la posibilidad de personalizar el editor
+ - Se agregó un splitter que al desplazar muestra un EditBox con la traduccion
+ 
+Versión 0.0.0.3
+ - Bugs Solucionados
+ - Se Agrego la posibilidad de Compilar el fuente Generado
+ - Se aumento la cantidad de Opciones
+
+Versión 0.0.0.4
+ - Bugs Solucionados
+ - Opciones para el compilador de fpc (Free Pascal) agregado
+ - Ampliación de Opciones
+ - Ventana de Mensajes Agregada
+
+Versión 0.0.0.5
+ - Se Agrego un compresor de Ejecutables
+ - Se Amplio la cantidad de Opciones
+ - Se Agrego la ayuda en la IDE
+ 
+Versión 0.0.0.6
+ - Bugs del IDE solucionados
+
+Versión 0.0.0.7
+ - Sistema de solapas agregada en la IDE
+ - Documentación ampliada
+
+Versión 0.0.0.8
+ - Se Agregó el menu Editar y un popmenu con las opciones de (Copiar, Cortar, Pegar,
+ Deshacer y Rehacer)
+
+Versión 0.0.0.9
+ - Se acomodaron algunas opciones
+
+Versión 0.0.0.12
+ - Se agregó el menu Ventanas
+
+Versión 0.0.1.13
+ - Se corrigio el bug de la ventana de traducción
+
+Versión 0.0.1.14
+ - Se solucionaron algunos Bugs de Comunicación con el compresor
+
+Versión 0.0.1.15
+ - Se amplió la cantidad de opciones
+
+Versión 0.1.1.30
+ - Se amplió la cantidad de opciones
+
+Versión 0.1.1.33
+ - Se corrigió algunos Bugs
+ 
+Versión 0.1.1.34
+ - Se corrigió la GUI
+
+Versión 0.1.1.40
+ - Se arreglo bug de las rutas hacia los archivos
+
+Versión 0.1.1.43
+ - Se acomodo la visualización de los mensajes
+
+Versión 0.1.1.46
+ - Se arreglo el Bug, cuando se cancelaba la apertura o guardado de un archivo
+
+Versión 0.1.1.47
+ - Se arreglo el bug de referencia a la ayuda
+
+Versión 0.1.1.48
+ - Se permite la opcion de seleccionar las rutas para mayor compatibilidad multiplataforma
+
+Versión 0.1.1.53
+ - ahora pregunta si desea guardar el pseudocódigo al cerrar la solapa
+
+Versión 0.1.1.64
+ - Bug de problemas al cerrar las solapas solucionado
+ - Bug de númeración de solapas solucionado
+ - Links de menues modificados
+ - Se modifico la gráfica
+
+Versión 0.1.1.66
+ - Bug de Excepción al cerrar la última solapa solucionado
+
+Versión 0.1.1.68
+ - Se acomodo la validación de los menues
+
+Versión 0.1.1.69
+ - Se arreglo el bug de muestra de resultados
+
+Versión 0.1.1.70
+ - Se agregó más validaciones
+
+Versión 0.1.1.71
+ - Bug de solapas solucionado
+
+Versión 0.1.1.74
+ - Soporte Multihilo
+ - Mejora en el cierre de documentos no guardados
+
+Versión 0.1.1.99
+ - Bugs solucionados (Cambio de solapas, Tratamiento de resultados)
+ - Se acomodo la interfaz

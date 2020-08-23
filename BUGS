@@ -1,0 +1,35 @@
+BUGS CONOCIDOS
+--------------------------------------------------------
+Debian Sarge:
+- No se detectó ningún Bugs
+
+Ubuntu
+- Problemas con la codificación de caracteres debido a la gtk1
+
+Nota [Ubuntu]: Para una correcta ejecución de la GUI, se deberá cambiar el valor
+de la variable de entorno LANG para que no sea UTF8.
+
+
+
+SI DETECTAS ALGUN BUG POR FAVOR NOTIFICALO A: PSEUDOTRANS@GMAIL.COM
+
+Equipos de Prueba:
+
+- Pentium IV 2.4 Ghz
+- 384 MB RAM DDR 333
+- HD 60 GB
+- Video i845GV
+- S.O.: 
+  -Debian Sarge
+  -Kernel: 2.6.8-2-686
+
+  -Ubuntu 6.06 Dapper
+  -Kernel: 2.6.15-26-686
+
+- Semprom 2400+
+- 256 MB Ram
+- HD 160 SATA
+- Video Nvidia 6200
+- S.O.: 
+  -Ubuntu 6.06 Dapper con Xgl y compiz
+  -Kernel: 2.6.15-26-k7

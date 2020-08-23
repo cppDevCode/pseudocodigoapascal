@@ -1,0 +1,36 @@
+(**************************************************************)
+{PROGRAMACION: ALEJANDRO LUCAS BALDRÉS                         }
+{FECHA: 25/09/06                                               }
+{LICENCIA: GNU/GPL                                             }
+{--------------------------------------------------------------}
+{Unidad de generacion de archivos				}
+{--------------------------------------------------------------}
+{COMPILADO CON FREEPASCAL                                      }
+
+unit Archivos;
+
+interface
+procedure Genero_logs(Nro_linea:integer;Destino:String);
+
+implementation
+uses
+SysUtils;
+/////////////////////////////////////////////PROCEDIMIENTO PARA GENERARAR LOS LOG
+procedure Genero_logs(Nro_linea:integer;Destino:String);
+ begin
+ //SI UN PARAMETRO CORRESPONDE A --LOG GENERO EL ARCHIVO O LE AGREGO LINEAS DE LOG
+ if (uppercase(ParamStr(1))='--LOG')or(uppercase(ParamStr(3))='--LOG')or(uppercase(ParamStr(4))='--LOG') Then
+     begin
+     assign(Output,'pseudotrans.log');
+     if fileExists('pseudotrans.log') then //SI EL ARCHIVO EXISTE LE AGREGO LINEAS
+	     append(Output)
+	 else rewrite(Output);
+     writeln(Output,'Generado el: '+DateTimeToStr(now()));
+     writeln(Output,'RESULTADO');
+     writeln (Output,'El codigo fuente fue generado en: '+Destino);
+     writeln (Output,'-------------------------------');
+     close(Output);
+     end;
+ end;
+////////////////////////////////////////FIN DE PROCEDIMIENTO PARA GENERARAR LOS LOG
+end.

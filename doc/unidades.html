@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>Ayuda Pseudocodigo a Pascal</title>
+</head>
+<body>
+<table style="text-align: left; width: 1006px; height: 511px;"
+ border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td
+ style="background-color: rgb(51, 204, 255); height: 50px; vertical-align: top;">DOCUMENTACI&Oacute;N
+DE UNIDADES</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">1.0
+UNIDAD CONSOLA</span><br>
+      <br>
+&nbsp; 1.1 LIMPIARLINEA<br>
+&nbsp;&nbsp;&nbsp; Limpia desde la posici&oacute;n del cursor hasta el
+final de la linea.<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; DECLARACI&Oacute;N&nbsp; procedimiento LimpiarLinea<br>
+      <br>
+&nbsp;&nbsp;&nbsp; EJEMPLO<br>
+&nbsp;&nbsp;&nbsp; ////////////////////////////////////// &nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">programa</span>
+ejemplo<br>
+      <br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; usar</span><br>
+&nbsp;&nbsp;&nbsp; Consola<br>
+&nbsp;&nbsp; &nbsp;<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; Variables</span><br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;I,J:Entero<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;<span style="font-weight: bold;">&nbsp;&nbsp; Comienza</span><br>
+&nbsp;&nbsp;&nbsp; Escribir('Esto es un ejemplo')<br>
+&nbsp;&nbsp;&nbsp; Iar(1,1)<br>
+&nbsp;&nbsp;&nbsp; LimpiarLinea<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; Termina</span><br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+&nbsp; <br>
+&nbsp; 1.2 LIMPIARPANTALLA<br>
+&nbsp;&nbsp;&nbsp; Limpia la pantalla completa<br>
+&nbsp;&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; DECLARACI&Oacute;N&nbsp; procedimiento
+LimpiarPantalla<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; EJEMPLO<br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; programa</span>
+ejemplo<br>
+&nbsp;&nbsp; &nbsp;<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; usar</span><br>
+&nbsp;&nbsp;&nbsp; Consola<br>
+&nbsp;&nbsp; &nbsp;<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; comienza</span><br>
+&nbsp;&nbsp;&nbsp; EscribirLinea('Hola mundo')<br>
+&nbsp;&nbsp;&nbsp; LeerTecla<br>
+&nbsp;&nbsp;&nbsp; LimpiarPantalla<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; termina</span><br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+      <br>
+&nbsp; 1.3 CURSORGRANDE<br>
+&nbsp;&nbsp;&nbsp; Muestra el cursor en un tama&ntilde;o mayor<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; DECLARACI&Oacute;N&nbsp; procedimiento CursorGrande<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; DESCRIPCI&Oacute;N&nbsp; Este procedimiento fabrica
+un cursor rectangular de gran tama&ntilde;o<br>
+&nbsp;&nbsp;&nbsp; (no implementado en unix)<br>
+      <br>
+&nbsp; 1.4 OCULTARCURSOR<br>
+&nbsp;&nbsp;&nbsp; Oculta el cursor<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; DECLARACI&Oacute;N&nbsp; procedimiento OcultarCursor<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp; 1.5 MOSTRARCURSOR<br>
+&nbsp;&nbsp;&nbsp; Muestra el cursor<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; DECLARACI&Oacute;N&nbsp; procedimiento MostrarCursor<br>
+      <br>
+&nbsp; 1.6 BORRARLINEA<br>
+&nbsp;&nbsp;&nbsp; Borra la linea en donde esta posicionado el cursor<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; DECLARACI&Oacute;N&nbsp; procedimiento BorrarLinea<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; EJEMPLO<br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; programa</span>
+OpenEjemplo<br>
+&nbsp;&nbsp; &nbsp;<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; usar</span><br>
+&nbsp;&nbsp;&nbsp; Consola<br>
+&nbsp;&nbsp; &nbsp;<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; comienza</span><br>
+&nbsp;&nbsp;&nbsp; EscribirLinea('hola Mundo')<br>
+&nbsp;&nbsp;&nbsp; EscribirLinea('hola Mundo')<br>
+&nbsp;&nbsp;&nbsp; Ira(1,2)<br>
+&nbsp;&nbsp;&nbsp; LeerTecla<br>
+&nbsp;&nbsp;&nbsp; BorrarLinea<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; termina</span><br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+      <br>
+&nbsp; 1.7 IRA<br>
+&nbsp;&nbsp;&nbsp; Posiciona el cursor en una cordenada de la pantalla<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; DECLARACI&Oacute;N&nbsp; procedimiento
+IrA(X:Byte;Y:Byte)<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; DESCRIPCI&Oacute;N Posiciona el cursor en la
+cordenada (X,Y), siendo su origen (1,1)<br>
+&nbsp;&nbsp;&nbsp; correspondiendose a la parte superior izquierda.<br>
+      <br>
+&nbsp;&nbsp;&nbsp; EJEMPLO<br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; programa</span>
+ejemplo<br>
+&nbsp;&nbsp; &nbsp;<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; usar</span><br>
+&nbsp;&nbsp;&nbsp; Consola<br>
+&nbsp;&nbsp; &nbsp;<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; comienza</span><br>
+&nbsp;&nbsp;&nbsp; IrA(1,12)<br>
+&nbsp;&nbsp;&nbsp; EscribirLinea('Hola Tango!!!')<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; termina</span><br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+      <br>
+&nbsp; 1.8 INSERTARLINEA<br>
+&nbsp;&nbsp;&nbsp; Inserta una linea vacia en la posici&oacute;n del
+cursor<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; DECLARACI&Oacute;N procedimiento InsertarLinea<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; EJEMPLO<br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; programa</span>
+ejemplo<br>
+&nbsp;&nbsp; &nbsp;<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; usar</span><br>
+&nbsp;&nbsp;&nbsp; Consola<br>
+&nbsp;&nbsp; &nbsp;<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; comienza</span><br>
+&nbsp;&nbsp;&nbsp; EscribirLinea('Hola mundo!!!')<br>
+&nbsp;&nbsp;&nbsp; InsertarLinea<br>
+&nbsp;&nbsp;&nbsp; Leertecla<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; termina</span><br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp; 1.9 TECLAPRESIONADA<br>
+&nbsp;&nbsp;&nbsp; Chequea si se presiono una tecla<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; DECLARACI&Oacute;N funcion TeclaPresionada:Logico<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; DESCRIPCI&Oacute;N Las teclas Shift, Alt y Ctrl no
+son reportadas.<br>
+      <br>
+&nbsp;&nbsp;&nbsp; EJEMPLO<br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; programa</span>
+ejemplo1<br>
+&nbsp;&nbsp; &nbsp;<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; usar</span><br>
+&nbsp;&nbsp;&nbsp; Consola<br>
+&nbsp;&nbsp; &nbsp;<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; Comienza</span><br>
+&nbsp;&nbsp;&nbsp; Escribir('Esperando a que presione una tecla')<br>
+&nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">repetir</span><br>
+&nbsp;&nbsp;&nbsp;<span style="font-weight: bold;"> Hasta</span>
+TeclaPresionada<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; termina</span><br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+&nbsp;<br>
+&nbsp; 1.10 LEERTECLA<br>
+&nbsp;&nbsp;&nbsp; Lee el valor de la tecla que se presiono<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; DECLARACI&Oacute;N funcion:Char<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; EJEMPLO<br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; programa</span>
+ejemplolectura<br>
+&nbsp;&nbsp; &nbsp;<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; usar</span><br>
+&nbsp;&nbsp;&nbsp; Consola<br>
+&nbsp;&nbsp; &nbsp;<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; variables</span><br>
+&nbsp;&nbsp;&nbsp; textos:char<br>
+&nbsp;&nbsp; &nbsp;<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; Comienza</span><br>
+&nbsp;&nbsp;&nbsp; EscribirLinea('Presione una tecla: ')<br>
+&nbsp;&nbsp;&nbsp; textos:=LeerTecla<br>
+&nbsp;&nbsp;&nbsp; Escribir(textos)<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; termina</span><br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+      <br>
+&nbsp; 1.11 FONDOTXT<br>
+&nbsp;&nbsp;&nbsp; Establece el fondo del texto.<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; DESCRIPCI&Oacute;N Procedimiento FondoTxt(Color:Byte)<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; EJEMPLO<br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; programa</span>
+Ejemplo<br>
+&nbsp;&nbsp; &nbsp;<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; usar</span><br>
+&nbsp;&nbsp;&nbsp; Consola<br>
+&nbsp;&nbsp; &nbsp;<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; comienza</span><br>
+&nbsp;&nbsp;&nbsp; FondoTxt(Verde)<br>
+&nbsp;&nbsp;&nbsp; escribir('hola')<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; termina</span><br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp; 1.12 COLORTXT<br>
+&nbsp;&nbsp;&nbsp; Establece el color del Texto.<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; DESCRIPCI&Oacute;N Procedimiento ColorTxt(Color:Byte)<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; EJEMPLO<br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; programa</span>
+Ejemplo<br>
+&nbsp;&nbsp; &nbsp;<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; usar</span><br>
+&nbsp;&nbsp;&nbsp; Consola<br>
+&nbsp;&nbsp; &nbsp;<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; comienza</span><br>
+&nbsp;&nbsp;&nbsp; ColorTxt(Verde)<br>
+&nbsp;&nbsp;&nbsp; escribir('hola')<br>
+      <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp; termina</span><br>
+&nbsp;&nbsp;&nbsp; //////////////////////////////////////<br>
+      <br>
+&nbsp; 1.13 VENTANA<br>
+&nbsp;&nbsp;&nbsp; Crea una nueva ventana en la pantalla<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; DESCRIPCI&Oacute;N Procedimiento
+Ventana(X1:Byte;Y1:Byte;X2:Byte;Y2:Byte)<br>
+      <span style="font-weight: bold;"><br>
+      </span></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+</body>
+</html>

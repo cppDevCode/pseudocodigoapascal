@@ -1,0 +1,12 @@
+{ Este es un archivo de recurso de Lazarus generado automáticamente }
+
+LazarusResources.Add('TFrmMensajes','FORMDATA',[
+  'TPF0'#12'TFrmMensajes'#11'FrmMensajes'#8'AutoSize'#9#11'BorderIcons'#11#0#11
+  +'BorderStyle'#7#8'bsDialog'#7'Caption'#6#8'Mensajes'#12'ClientHeight'#2'M'#11
+  +'ClientWidth'#3'_'#2#9'FormStyle'#7#11'fsStayOnTop'#8'OnCreate'#7#10'FormCre'
+  +'ate'#6'OnShow'#7#8'FormShow'#13'PixelsPerInch'#2'S'#8'Position'#7#9'poDefau'
+  +'lt'#7'Visible'#9#18'HorzScrollBar.Page'#3'^'#2#18'VertScrollBar.Page'#2'L'#4
+  +'Left'#3#162#0#6'Height'#2'M'#3'Top'#3'~'#2#5'Width'#3'_'#2#0#5'TMemo'#7'Mem'
+  +'trad'#7'Anchors'#11#5'akTop'#6'akLeft'#7'akRight'#8'akBottom'#0#8'ReadOnly'
+  +#9#8'TabOrder'#2#0#6'Height'#2'M'#5'Width'#3'_'#2#0#0#0
+]);

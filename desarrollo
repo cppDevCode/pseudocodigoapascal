@@ -1,0 +1,17 @@
+¿Por que se selecciono FreePascal y la IDE Lazarus para desarrollar este programa?
+
+- Compilador e IDE Opensource (Por lo que no hay que pagar ninguna licencia)
+- Calidad de Soporte y de Software
+- Documentación
+- Actividad de los proyectos (Lazarus y Freepascal);
+- Enlazamiento Cruzado
+- Soporte del compilador para más de 15 plataformas
+- Compatibilidad con los compiladores comerciales de Borland (Turbo pascal y Delphi)
+- La mayoria de los componentes son Multiplataforma
+
+Versiones Utilizadas para desarrollar Pseudotrans:
+	- Freepascal: 2.0.4 Stable
+	- Lazarus: 0.9.18 Beta
+Links:
+	Freepascal: http://www.freepascal.org
+	Lazarus: http://lazarus.freepascal.org

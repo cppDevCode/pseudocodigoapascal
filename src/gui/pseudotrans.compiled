@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="/usr/bin/fpc" Date="1548372422"/>
+  <Params Value=" -Tlinux -Px86_64 -MObjFPC -Scgi -CX -Cg -Os3 -XX -l -vewnhibq -Fu/usr/lib/lazarus/2.0.0/components/ideintf/units/x86_64-linux/gtk2 -Fu/usr/lib/lazarus/2.0.0/components/synedit/units/x86_64-linux/gtk2 -Fu/usr/lib/lazarus/2.0.0/components/lazcontrols/lib/x86_64-linux/gtk2 -Fu/usr/lib/lazarus/2.0.0/lcl/units/x86_64-linux/gtk2 -Fu/usr/lib/lazarus/2.0.0/lcl/units/x86_64-linux -Fu/usr/lib/lazarus/2.0.0/components/lazutils/lib/x86_64-linux -Fu/usr/lib/lazarus/2.0.0/packager/units/x86_64-linux -Fu/home/alejandro/Documentos/Programacion/Proyectos/pseudotrans/src/gui/ -o/home/alejandro/Documentos/Programacion/Proyectos/pseudotrans/src/gui/pseudotrans -dLCL -dLCLgtk2 pseudotrans.lpr"/>
+  <Complete Value="False"/>
+</CONFIG>

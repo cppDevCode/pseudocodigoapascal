@@ -1,0 +1,867 @@
+object FrmOpciones: TFrmOpciones
+  Left = 333
+  Height = 429
+  Top = 190
+  Width = 419
+  HorzScrollBar.Page = 418
+  VertScrollBar.Page = 428
+  Caption = 'Opciones del Editor'
+  Icon.Data = {
+    360C0000424D360C000000000000360000002800000020000000200000000100
+    180000000000000C000064000000640000000000000000000000FFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFD63F00DE4300D74605E74200FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCF56
+    1BDE6B1FDE6B23DE6B21CE520FC73900FFFFFFFFFFFFFFFFFFCE4709D74200D7
+    3D00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE7A5
+    77DF7B3BD66318D65F15D65F13C63100FFFFFFFFFFFFCF3500E7A785EFAD85C6
+    4200D73D00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEF5201E79E
+    73F7C7AFCE560EEFBD8DFFD796FFD69EC63300C73300E79E77E7A57BE79E77EF
+    C6A5C73500D73300FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFE76B1FEF6719FFFFFFFFFFFFFFFFFFD74A00EFB5
+    8CEFCFAFFFDE84FF9F00FF9500FFDF7FD65713D65A11E79C73E79C77DF9D7FFF
+    D77FFFE79EEFB57BDE3500FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFF7725D66B23EF9746DF6F29E76318FFFFFFE75B12CE5B12EFAF
+    87EFC7A5FFAF01FFA500FF9D00FFC757DE6F31D65A10DF773DE79E7BFFE7AFFF
+    8C00FF8D00FFA500E77B42FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFF862DDF7B2FEF8F3DE78635E7975ED7560FD6631CE78435E77B2BDF7F
+    37EFCEB5FFAD00FFA700FFA500FFB51EE7AF7FD66725CF4A08F7D7AFFF9D0DFF
+    9500FF9500FFCE6BBD3700CF3B00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFEF7B2BEF9643E78F3BE78431EFB58CD7520CD65712E78737DF7B2DDE67
+    18EFB795FFAD00FFAD00FFA700FFA500FFC65BFFCE5AFFD67FFFBD4EFF9500FF
+    9600FF9600F7BD77CF4E0CCF4F0CD63F00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFF7852DE78F42E78537F7C67FFFDE2FFFE7B5D65716DE6F25DF7327F7CE
+    94FFE79EFFAF00FFAF00FFAD00FFA700FFA500FF9F00FF9D00FF9C00FF9D00FF
+    9600FFD68FC73D03CF520ECE4F0CCF4709DF4302FFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFDE7B2DF7C786FFD623FFC600FFC600FFEF77E7A773FFF7ADFFBD
+    00FFB500FFAF00FFAF00FFAF00FFA700FFA500FFA500FF9F00FF9E00FF9F00FF
+    9C00FF9E08F7C784C74205EFBD73FFCF5EFFAD3FFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFE76F21FFFFA7FFC600FFC700FFC600FFBF00FFC600FFBD00FFB7
+    00FFB500FFB700FFB501FFBD27FFD743FFDF4FFFD63FFFB725FF9F00FF9D00FF
+    9F00FF9600FFA712FFDF95FF9500FF9400FFB723C72F00FFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFE77325F7BD73FFE73DFFC700FFC700FFC600FFC600FFBF00FFBD
+    00FFC607FFD652FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCF6BFFA508FF
+    9C00FF9F00FF9600FF9600FF9700FF9600FFB723D73700FFFFFFFFFFFFFF943B
+    F78E39EF8633EF9E46EFA54EF7C684FFD719FFCE00FFC600FFC700FFC700FFBD
+    3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE76BFF
+    9F05FF9D00FF9F00FF9D00FF9E00FFA531D63700FFFFFFFFFFFFFFA546DE8537
+    DF7327DE7B2DEF9F47F7AF52EF9F57FFE763FFCF00FFCE00FFD600FFBF4EFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEF5BFF
+    C75AFF9C00FF9E00FFA701DF7329FFFFFFFFFFFFFFFFFFFFFFFFFFA743E7944E
+    DF7325DE7B2FE78635F7B55BFFEFADFFCE00FFCE00FFD700FFBD4BFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEF5AFF
+    E76BFF9F00FFA500FFAD01CE632DBF2D00FFFFFFFFFFFFFFFFFFFFA747EFA563
+    D7631EDE6F2BDE6F2DEFAD67FFE723FFD700FFD600FFC62BFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF63FFEF5AFF
+    EF67FFA702FFA700FFAD0EE79D63DF6F2DDF3F00FFFFFFFFFFFFFFA546F7C677
+    FFDE56FFE763FFEF67FFEF5AFFD700FFD600FFE706FFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE756FFDF52F7
+    DE67FFA700FFA500FFA500FFA700FFAF00FF9423FFFFFFFFFFFFFFA54AFFE76F
+    FFE700FFE700FFE700FFDE00FFDE00FFDF00FFD729FFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF7CE4EF7CF4FF7CE4EF7
+    C657FFAD00FFAD00FFA500FFA500FFB707D63F04FFFFFFFFFFFFFFFFFFFFE74A
+    FFE700FFE700FFE700FFE700FFDE00FFE700FFC739FFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFBD46EFBD47EFBF46EFBF4BFF
+    B525FFAD00FFAD00FFAF00FFB700FFAF31FFFFFFFFFFFFFFFFFFFFFFFFFFDE35
+    FFF715FFEF0CFFEF00FFE700FFE700FFE700FFBF3DFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFB746EFAD43E7AF42E7AD43F7B757FF
+    B500FFB700FFC637F7861EF76312F74600FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    EF8D4ADF7B43E7945FFFF73FFFE700FFE700F7B52DF7A746FFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFDE9C3BF7AF42E79F3DDE9F3BDE9C3BDE9C4EFFBD09FF
+    BD00FFD725D7420BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFAF4EF7BF5FF7AD5EFFF74FFFE700FFE700FFD612DF853DF79F3BF79F3DE797
+    39EF9739F79C3BF79D3BE79637DE8C35DE8E35D68735DE974AFFC705FFBF00FF
+    C600D74E12FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFB553FFBF63F7AD63FFEF7BFFE700FFE700FFEF00EFA52BCF6F33D77B2FD77F
+    2FD77F2FD77F2FD67B2FD67B2FCF772FCE6F2FEFAF4AFFCE00FFC700FFBF00FF
+    BF00FFCE37CE460DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFB757FFC76FFFF752FFE700FFE700FFE700FFE700FFEF00EFA51FCE5B2DC75A
+    2BC65F29C65F29C75E2BC65F31EFA73FFFBD21FFCF00FFCE00FFC700FFC700FF
+    C700FFD735EF5B12FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFB75BFFF700FFE700FFE700FFE700FFEF00FFE700FFE700FFEF00FFF700FFD7
+    13F7C725FFC623FFC61EFFDF02FFD700FFD600FFDE02EFAF31FFC637FFDF06F7
+    AF2FEF5717FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFBF47FFEF00FFF721F7BF3DE77F47FFF75EFFE700FFE700FFE700FFE7
+    00FFE700FFDF00FFDF00FFD700FFD700FFDF2FD65F27FFFFFFFFFFFFF76B21FF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFCE52FFA75BFFFFFFEF8D42F7BD6BFFE709FFE700FFE700FFEF
+    2BFFE733FFDF39FFDF00FFDE00FFD700FFDE37FFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA54EFFFF4AFFE700FFE700FFF727DE77
+    3DFFFFFFE76F39FFF71DFFE700FFEF29EF9729FFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC65BFFB742FFDE39FFEF31EF953FFFFF
+    FFFFFFFFFFFFFFFFB739FF873DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+  }
+  OnShow = FormShow
+  Position = poDesktopCenter
+  object PageControl1: TPageControl
+    Left = 1
+    Height = 380
+    Top = 4
+    Width = 410
+    ActivePage = TabSheet2
+    TabIndex = 1
+    TabOrder = 0
+    OnChange = PageControl1Change
+    object TabSheet1: TTabSheet
+      Caption = 'Gráficos'
+      object GroupBox1: TGroupBox
+        Left = 7
+        Height = 162
+        Top = 10
+        Width = 390
+        Caption = 'Cuadro de Texto'
+        TabOrder = 0
+        object Label1: TLabel
+          Left = 3
+          Height = 17
+          Top = 9
+          Width = 51
+          Caption = 'Fondo:'
+          Color = clNone
+          ParentColor = False
+        end
+        object Label2: TLabel
+          Left = 4
+          Height = 17
+          Top = 44
+          Width = 174
+          Caption = 'Espaciado entre Lineas:'
+          Color = clNone
+          ParentColor = False
+        end
+        object Label3: TLabel
+          Left = 8
+          Height = 17
+          Top = 121
+          Width = 108
+          Caption = 'Color de Letra:'
+          Color = clNone
+          ParentColor = False
+        end
+        object ColorFondo: TColorBox
+          Left = 177
+          Height = 25
+          Hint = 'Seleccione el Color de Fondo del '#10'Editor'
+          Top = 7
+          Width = 195
+          Items.Strings = (
+            'clBlack'
+            'clMaroon'
+            'clGreen'
+            'clOlive'
+            'clNavy'
+            'clPurple'
+            'clTeal'
+            'clGray'
+            'clSilver'
+            'clRed'
+            'clLime'
+            'clYellow'
+            'clBlue'
+            'clFuchsia'
+            'clAqua'
+            'clSilver'
+            'clGray'
+            'clWhite'
+            'clCream'
+            'clNone'
+            'clDefault'
+          )
+          MaxLength = 0
+          ParentColor = False
+          TabOrder = 0
+          Text = 'clwhite'
+        end
+        object Button1: TButton
+          Left = 5
+          Height = 30
+          Top = 79
+          Width = 110
+          AutoSize = True
+          BorderSpacing.InnerBorder = 4
+          Caption = 'Tipo de Letra'
+          OnClick = Button1Click
+          TabOrder = 1
+        end
+        object ColorLetra: TColorBox
+          Left = 178
+          Height = 24
+          Top = 114
+          Width = 194
+          Items.Strings = (
+            'clBlack'
+            'clMaroon'
+            'clGreen'
+            'clOlive'
+            'clNavy'
+            'clPurple'
+            'clTeal'
+            'clGray'
+            'clSilver'
+            'clRed'
+            'clLime'
+            'clYellow'
+            'clBlue'
+            'clFuchsia'
+            'clAqua'
+            'clSilver'
+            'clGray'
+            'clWhite'
+            'clCream'
+            'clNone'
+            'clDefault'
+          )
+          MaxLength = 0
+          ParentColor = False
+          TabOrder = 2
+          Text = 'clblack'
+        end
+        object SEEspaciado: TSpinEdit
+          Left = 178
+          Height = 21
+          Top = 39
+          Width = 37
+          TabOrder = 3
+          Value = 1
+        end
+      end
+      object GroupBox2: TGroupBox
+        Left = 4
+        Height = 157
+        Top = 172
+        Width = 393
+        Caption = 'Gutter'
+        TabOrder = 1
+        object Label4: TLabel
+          Left = 3
+          Height = 17
+          Top = 9
+          Width = 51
+          Caption = 'Fondo:'
+          Color = clNone
+          ParentColor = False
+        end
+        object Label5: TLabel
+          Left = 3
+          Height = 17
+          Top = 34
+          Width = 148
+          Caption = 'Cantidad de Dígitos:'
+          Color = clNone
+          ParentColor = False
+        end
+        object ColorGutter: TColorBox
+          Left = 180
+          Height = 22
+          Top = 2
+          Width = 192
+          Items.Strings = (
+            'clBlack'
+            'clMaroon'
+            'clGreen'
+            'clOlive'
+            'clNavy'
+            'clPurple'
+            'clTeal'
+            'clGray'
+            'clSilver'
+            'clRed'
+            'clLime'
+            'clYellow'
+            'clBlue'
+            'clFuchsia'
+            'clAqua'
+            'clSilver'
+            'clGray'
+            'clWhite'
+            'clCream'
+            'clNone'
+            'clDefault'
+          )
+          MaxLength = 0
+          ParentColor = False
+          TabOrder = 0
+          Text = 'clteal'
+        end
+        object SECant_Digitos: TSpinEdit
+          Left = 181
+          Height = 20
+          Top = 31
+          Width = 37
+          MinValue = 4
+          TabOrder = 1
+          Value = 4
+        end
+        object CbxCero: TCheckBox
+          Left = 7
+          Height = 24
+          Top = 61
+          Width = 195
+          Caption = 'Mostrar Ceros Adelante'
+          Checked = True
+          State = cbChecked
+          TabOrder = 2
+        end
+        object CbxIni_Cero: TCheckBox
+          Left = 8
+          Height = 24
+          Top = 85
+          Width = 170
+          Caption = 'Comenzar con Cero'
+          TabOrder = 3
+        end
+        object CBNro_Linea: TCheckBox
+          Left = 8
+          Height = 24
+          Top = 109
+          Width = 199
+          Caption = 'Mostrar número de linea'
+          Checked = True
+          State = cbChecked
+          TabOrder = 4
+        end
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Rutas a Herramientas'
+      OnContextPopup = TabSheet2ContextPopup
+      object Label6: TLabel
+        Left = 6
+        Height = 15
+        Top = 18
+        Width = 76
+        Caption = 'Compilador:'
+        Color = clNone
+        ParentColor = False
+      end
+      object Label8: TLabel
+        Left = 6
+        Height = 15
+        Top = 47
+        Width = 74
+        Caption = 'Compresor:'
+        Color = clNone
+        ParentColor = False
+      end
+      object Label11: TLabel
+        Left = 6
+        Height = 15
+        Top = 75
+        Width = 74
+        Caption = 'Diccionario:'
+        Color = clNone
+        ParentColor = False
+      end
+      object Label14: TLabel
+        Left = 6
+        Height = 15
+        Top = 103
+        Width = 101
+        Caption = 'Documentacion:'
+        Color = clNone
+        ParentColor = False
+      end
+      object Label15: TLabel
+        Left = 6
+        Height = 15
+        Top = 129
+        Width = 61
+        Caption = 'Ejemplos:'
+        Color = clNone
+        ParentColor = False
+      end
+      object EFNCompilador: TFileNameEdit
+        Left = 157
+        Height = 23
+        Top = 12
+        Width = 210
+        TabOrder = 0
+        DialogTitle = 'Seleccione el compilador'
+        ButtonWidth = 23
+        NumGlyphs = 1
+        Flat = True
+        ParentColor = False
+      end
+      object FNECompresor: TFileNameEdit
+        Left = 157
+        Height = 21
+        Top = 43
+        Width = 210
+        TabOrder = 1
+        ButtonWidth = 23
+        NumGlyphs = 1
+        Flat = True
+        ParentColor = False
+      end
+      object FNEDiccionario: TFileNameEdit
+        Left = 157
+        Height = 19
+        Top = 73
+        Width = 208
+        TabOrder = 2
+        DialogTitle = 'Seleccione un diccionario'
+        ButtonWidth = 23
+        NumGlyphs = 1
+        Flat = True
+        ParentColor = False
+      end
+      object TDEDoc: TDirectoryEdit
+        Left = 157
+        Height = 21
+        Top = 97
+        Width = 208
+        TabOrder = 3
+        DialogTitle = 'Seleccione la ruta de la documentacion'
+        ButtonWidth = 23
+        NumGlyphs = 1
+        Flat = True
+        ParentColor = False
+      end
+      object TDEejemplos: TDirectoryEdit
+        Left = 157
+        Height = 20
+        Top = 124
+        Width = 208
+        TabOrder = 4
+        DialogTitle = 'Ruta ejemplos'
+        ButtonWidth = 23
+        NumGlyphs = 1
+        Flat = True
+        ParentColor = False
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'Compilador'
+      object Label7: TLabel
+        Left = 5
+        Height = 17
+        Top = 4
+        Width = 398
+        AutoSize = False
+        Caption = 'UNICAMENTE PARA FREEPASCAL'
+        Color = clRed
+        Font.Color = clYellow
+        Font.Height = -18
+        Font.Style = [fsBold]
+        Layout = tlCenter
+        ParentColor = False
+        Transparent = False
+      end
+      object ChBn: TCheckBox
+        Left = 9
+        Height = 22
+        Top = 27
+        Width = 388
+        AutoSize = False
+        Caption = 'No leer el archivo de Congifuracióon (fpc.cfg)'
+        TabOrder = 0
+      end
+      object ChBa: TCheckBox
+        Left = 9
+        Height = 22
+        Top = 52
+        Width = 301
+        Caption = 'No Borrar el archvo en assembler generado'
+        TabOrder = 1
+      end
+      object ChBCe: TCheckBox
+        Left = 9
+        Height = 22
+        Top = 76
+        Width = 298
+        Caption = 'Usar Instrucciones de Pto Flotante emulada'
+        TabOrder = 2
+      end
+      object ChBg: TCheckBox
+        Left = 9
+        Height = 22
+        Top = 100
+        Width = 271
+        Caption = 'Generar Información de Debugeo (GDB)'
+        TabOrder = 3
+      end
+      object ChBgd: TCheckBox
+        Left = 9
+        Height = 22
+        Top = 124
+        Width = 269
+        Caption = 'Generar Información de Debugeo (DBX)'
+        TabOrder = 4
+      end
+      object ChBSd: TCheckBox
+        Left = 9
+        Height = 22
+        Top = 148
+        Width = 187
+        Caption = 'Compatibilidad con Delphi'
+        TabOrder = 5
+      end
+      object ChBSo: TCheckBox
+        Left = 9
+        Height = 22
+        Top = 172
+        Width = 188
+        Caption = 'Compatibilidad con TP 7.0'
+        TabOrder = 6
+      end
+      object ChBal: TCheckBox
+        Left = 9
+        Height = 22
+        Top = 196
+        Width = 347
+        Caption = 'Lineas de Codigo comentario en el arch. assembler'
+        TabOrder = 7
+      end
+      object ChBap: TCheckBox
+        Left = 8
+        Height = 22
+        Top = 220
+        Width = 345
+        Caption = 'Conductos para comunicarse con el Arc. assembler'
+        TabOrder = 8
+      end
+      object ChBCD: TCheckBox
+        Left = 9
+        Height = 22
+        Top = 244
+        Width = 171
+        Caption = 'Crear Libreria dinamica'
+        TabOrder = 9
+      end
+    end
+    object TabSheet4: TTabSheet
+      Caption = 'Ventanas'
+      object ChBMsj: TCheckBox
+        Left = 6
+        Height = 24
+        Top = 10
+        Width = 212
+        Caption = 'Ver Ventana de Mensajes'
+        TabOrder = 0
+      end
+    end
+    object TabSheet5: TTabSheet
+      Caption = 'Herramientas'
+      object GroupBox3: TGroupBox
+        Left = 4
+        Height = 333
+        Top = 7
+        Width = 396
+        Caption = 'UPX'
+        TabOrder = 0
+        object ChBd: TCheckBox
+          Left = 7
+          Height = 24
+          Top = 2
+          Width = 123
+          Caption = 'Descomprimir'
+          OnClick = ChBdClick
+          TabOrder = 0
+        end
+        object GBComprimo: TGroupBox
+          Left = 7
+          Height = 240
+          Top = 34
+          Width = 384
+          Caption = 'Opciones de Compresión'
+          TabOrder = 1
+          object Label9: TLabel
+            Left = 191
+            Height = 17
+            Top = 97
+            Width = 161
+            Caption = 'Memoria p/ comprimir:'
+            Color = clNone
+            ParentColor = False
+          end
+          object Label10: TLabel
+            Left = 240
+            Height = 17
+            Top = 141
+            Width = 95
+            Caption = 'max: 999999'
+            Color = clNone
+            ParentColor = False
+          end
+          object RGComp: TRadioGroup
+            Left = 11
+            Height = 206
+            Top = 7
+            Width = 147
+            AutoFill = True
+            Caption = 'Compresión'
+            ChildSizing.LeftRightSpacing = 6
+            ChildSizing.TopBottomSpacing = 6
+            ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+            ChildSizing.EnlargeVertical = crsHomogenousChildResize
+            ChildSizing.ShrinkHorizontal = crsScaleChilds
+            ChildSizing.ShrinkVertical = crsScaleChilds
+            ChildSizing.Layout = cclLeftToRightThenTopToBottom
+            ChildSizing.ControlsPerLine = 1
+            ItemIndex = 0
+            Items.Strings = (
+              'La más rápida'
+              '1'
+              '2'
+              '3'
+              '4'
+              '5'
+              '6'
+              '7'
+              '8'
+              'La Mejor'
+            )
+            TabOrder = 0
+          end
+          object CBallmethods: TCheckBox
+            Left = 190
+            Height = 24
+            Top = 21
+            Width = 162
+            Caption = 'Todos los metodos'
+            TabOrder = 1
+          end
+          object CBallfilters: TCheckBox
+            Left = 190
+            Height = 24
+            Top = 45
+            Width = 137
+            Caption = 'Todos los filtros'
+            TabOrder = 2
+          end
+          object SEcrp: TSpinEdit
+            Left = 239
+            Height = 20
+            Top = 117
+            Width = 106
+            MaxValue = 999999
+            MinValue = 10000
+            TabOrder = 3
+            Value = 10000
+          end
+        end
+        object Chbt: TCheckBox
+          Left = 7
+          Height = 24
+          Top = 282
+          Width = 181
+          Caption = 'Comprobar Integridad'
+          TabOrder = 2
+        end
+      end
+    end
+    object TabSheet6: TTabSheet
+      Caption = 'Historial'
+      object Label12: TLabel
+        Left = 13
+        Height = 17
+        Top = 175
+        Width = 155
+        Caption = 'Borrar Historial Cada:'
+        Color = clNone
+        ParentColor = False
+      end
+      object Label13: TLabel
+        Left = 227
+        Height = 17
+        Top = 175
+        Width = 34
+        Caption = 'Días'
+        Color = clNone
+        ParentColor = False
+      end
+      object LabFaltan: TLabel
+        Left = 5
+        Height = 10
+        Top = 332
+        Width = 392
+        Alignment = taCenter
+        Caption = 'El historial no se borrará automaticamente'
+        Color = clNone
+        Font.Height = -11
+        ParentColor = False
+      end
+      object RGHistorial: TRadioGroup
+        Left = 5
+        Height = 152
+        Top = 4
+        Width = 392
+        AutoFill = True
+        Caption = 'Historial'
+        ChildSizing.LeftRightSpacing = 6
+        ChildSizing.TopBottomSpacing = 6
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsHomogenousChildResize
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 1
+        Items.Strings = (
+          'No generar historial'
+          'Generar historial de Consola (--log)'
+          'Generar historial de Compilación'
+          'Generar historial de Todo'
+        )
+        TabOrder = 0
+        object BtnBorrarHist: TButton
+          Left = 6
+          Height = 32
+          Top = 114
+          Width = 380
+          AutoSize = True
+          BorderSpacing.InnerBorder = 4
+          Caption = 'Borrar Historial'
+          OnClick = BtnBorrarHistClick
+          TabOrder = 5
+        end
+      end
+      object SEDias: TSpinEdit
+        Left = 171
+        Height = 18
+        Top = 172
+        Width = 50
+        MaxValue = 365
+        OnChange = SEDiasChange
+        TabOrder = 1
+        Value = 1
+      end
+      object GroupBox4: TGroupBox
+        Left = 14
+        Height = 131
+        Top = 192
+        Width = 386
+        Caption = 'Vista del Historial'
+        TabOrder = 2
+        object MemHistorial: TMemo
+          Left = 4
+          Height = 106
+          Top = 1
+          Width = 369
+          ReadOnly = True
+          TabOrder = 0
+        end
+      end
+    end
+  end
+  object BitCancelar: TBitBtn
+    Left = 8
+    Height = 28
+    Top = 392
+    Width = 90
+    AutoSize = True
+    Cancel = True
+    Caption = 'Cancelar'
+    Glyph.Data = {
+      7C0400002F2A2058504D202A2F0A7374617469632063686172202A6772617068
+      69635B5D203D207B0A2231362031362035322031222C0A222E2063204E6F6E65
+      222C0A222C20632023303030303030222C0A222D20632023343732353235222C
+      0A222A20632023344632393239222C0A226120632023303630343034222C0A22
+      6220632023373333393339222C0A226320632023323131313131222C0A226420
+      632023424635363536222C0A226520632023433735373537222C0A2266206320
+      23344632373237222C0A226720632023303530343034222C0A22682063202338
+      3533463346222C0A226920632023414635323532222C0A226A20632023344532
+      373237222C0A226B20632023423735323532222C0A226C206320233237313531
+      35222C0A226D20632023353232393239222C0A226E2063202334413231323122
+      2C0A226F20632023423733333333222C0A227020632023413733333333222C0A
+      227120632023323731343134222C0A227220632023303130303030222C0A2273
+      20632023363330303030222C0A227420632023413530303030222C0A22752063
+      2023333730303030222C0A227620632023363330313031222C0A227720632023
+      413530323032222C0A227820632023393430303030222C0A2279206320234135
+      30313031222C0A227A20632023413730323032222C0A22412063202336373037
+      3037222C0A224220632023423732423242222C0A224320632023423532463246
+      222C0A224420632023393630453045222C0A224520632023313830303030222C
+      0A224620632023333730313031222C0A224720632023414631423142222C0A22
+      4820632023414432333233222C0A224920632023353330333033222C0A224A20
+      632023433635423542222C0A224B20632023434536373637222C0A224C206320
+      23394532353235222C0A224D20632023424434323432222C0A224E2063202342
+      3733463346222C0A224F20632023323730303030222C0A225020632023313430
+      303030222C0A225120632023394633353335222C0A2252206320234137334433
+      44222C0A225320632023333730323032222C0A22542063202343363541354122
+      2C0A225520632023373731373137222C0A225620632023303530303030222C0A
+      222E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E222C0A222E2E2E2E2E2E2E2E2E2E2E
+      2C2E2E2E2E222C0A222E2E2E2D2A2E2E2E2E2E6162632E2E2E222C0A222E2E2D
+      6465662E2E2E67686569632E2E222C0A222E2E2A6565656A2E676865656B6C2E
+      2E222C0A222E2E2E6D656565666865656B6C2E2E2E222C0A222E2E2E2E6D6565
+      6565656B6C2E2E2E2E222C0A222E2E2E2E2E6E6F6F6F70712E2E2E2E2E222C0A
+      222E2E2E2E727374747474752E2E2E2E2E222C0A222E2E2E727677777879777A
+      752E2E2E2E222C0A222E2E72414243444546474348462E2E2E222C0A222E2C49
+      4A4B4C452E2E464D4B4E4F2E2E222C0A222E2E505152452E2E2E2E535455562E
+      2E222C0A222E2E2E50452E2E2E2E2E2E4F562E2E2E222C0A222E2E2E2E2E2E2E
+      2E2E2E2E2E2E2E2E2E222C0A222E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E227D0A
+    }
+    ModalResult = 2
+    NumGlyphs = 0
+    OnClick = BitCancelarClick
+    TabOrder = 1
+  end
+  object BitBtnAplicar: TBitBtn
+    Left = 320
+    Height = 28
+    Top = 392
+    Width = 76
+    AutoSize = True
+    Caption = 'Aplicar'
+    Glyph.Data = {
+      F50300002F2A2058504D202A2F0A7374617469632063686172202A6772617068
+      69635B5D203D207B0A2231362031362034332031222C0A222E2063204E6F6E65
+      222C0A222C20632023353237423446222C0A222D20632023353237423533222C
+      0A222A20632023353637463536222C0A226120632023383543363835222C0A22
+      6220632023344637373446222C0A226320632023354238343541222C0A226420
+      632023374642443746222C0A226520632023324434373244222C0A2266206320
+      23354638453546222C0A226720632023374642373746222C0A22682063202332
+      4234323242222C0A226920632023324436373242222C0A226A20632023314233
+      463142222C0A226B20632023333337373333222C0A226C206320233437413534
+      37222C0A226D20632023343239353432222C0A226E2063202331353246313422
+      2C0A226F20632023324436373244222C0A227020632023343641353436222C0A
+      227120632023343639433436222C0A227220632023314334333143222C0A2273
+      20632023333737423335222C0A227420632023343239373432222C0A22752063
+      2023313332423133222C0A227620632023323735373235222C0A227720632023
+      344541353445222C0A227820632023353641443536222C0A2279206320233537
+      41373537222C0A227A20632023343339353433222C0A22412063202331313237
+      3131222C0A224220632023323735363237222C0A224320632023354541463545
+      222C0A224420632023373342373733222C0A224520632023364642373646222C
+      0A224620632023343739353437222C0A224720632023313032353130222C0A22
+      4820632023323735363235222C0A224920632023363742353637222C0A224A20
+      632023343639343436222C0A224B20632023304632313045222C0A224C206320
+      23323134413231222C0A224D20632023304431443044222C0A222E2E2E2E2E2E
+      2E2E2E2E2E2E2E2E2E2E222C0A222E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E222C
+      0A222E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E222C0A222E2E2E2E2E2E2E2E2E2E
+      2E2C2D2E2E2E222C0A222E2E2E2E2E2E2E2E2E2E2A6161622E2E222C0A222E2E
+      2E2E2E2E2E2E2E63616164652E2E222C0A222E2E2E2E2E2E2E2E66616167682E
+      2E2E222C0A222E2E2E696A2E2E6B6C6C6D6E2E2E2E2E222C0A222E2E6F707172
+      73707074752E2E2E2E2E222C0A222E2E7677787878797A412E2E2E2E2E2E222C
+      0A222E2E2E4243444546472E2E2E2E2E2E2E222C0A222E2E2E2E48494A4B2E2E
+      2E2E2E2E2E2E222C0A222E2E2E2E2E4C4D2E2E2E2E2E2E2E2E2E222C0A222E2E
+      2E2E2E2E2E2E2E2E2E2E2E2E2E2E222C0A222E2E2E2E2E2E2E2E2E2E2E2E2E2E
+      2E2E222C0A222E2E2E2E2E2E2E2E2E2E2E2E2E2E2E2E227D0A
+    }
+    NumGlyphs = 0
+    OnClick = BitBtnAplicarClick
+    TabOrder = 2
+  end
+  object FontDialog: TFontDialog
+    Width = 772
+    Height = 412
+    Title = 'Escoja una fuente'
+    Font.Height = -12
+    Font.Name = 'courier [adobe]'
+    PreviewText = 'Gracias Por usar PseudoTrans!!!'
+    left = 56
+    top = 96
+  end
+end

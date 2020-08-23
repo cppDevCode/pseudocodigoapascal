@@ -1,0 +1,294 @@
+PSEUDOCÓDIGO DE LA UNPSJB (UNIV. NAC. de la PATAGONIA SAN JUAN BOSCO)
+
+1.0 Estructura General de un Programa
+
+
+  Programa <Identificador>
+
+  Usar
+  <Unidades>
+
+  Constantes
+  <Identificador>=Tipo_Dato
+
+  Tipos
+  <Identificador>=ARREGLO [Init..Tope] de Tipo_Dato
+  <Identificador>=ARCHIVO DE Tipo_Dato
+
+  Var
+  <identificador>:Tipo_Dato
+
+  Procedimiento <Identificador> ([var] <Identificador>:Tipo_Dato;[var] <Identificador>)
+   [Var]
+   Comienza
+   Fin
+ 
+  Funcion <Identificador> (<Identificador>:Tipo_Dato;<Identificador>:Tipo_Dato):Tipo_Dato
+   Comienza
+   Fin
+ 
+  Comienza
+  Fin
+
+2.0 Instrucciones
+  2.1 LEER
+    Lee un valor de la entrada estandar
+    
+    DECLARACIÓN procedimiento Leer(var <Identificador>)
+    
+    EJEMPLO
+    //////////////////////////////////////
+    programa Ejemplo
+    
+    variables
+    valor:Entero
+    
+    comienza
+    Escribir ('Ingrese un valor del 1 al 10: ')
+    Leer(valor)
+    EscribirLinea(valor)
+    termina
+    //////////////////////////////////////
+    
+  2.2 ESCRIBIR
+    Coloca un valor en la salida estandar.
+    
+    DECLARACIÓN procedimiento Escribir(var <Identificador>)
+    
+    EJEMPLO
+    //////////////////////////////////////
+    programa ejemplo
+    
+    comienza
+    Escribir ('hola mundo!')
+    termina
+    //////////////////////////////////////
+
+  2.3 COMENTARIOS
+   // <COMENTARIO>
+  (* <COMENTARIO> *)
+  { <COMENTARIO}
+
+  2.4 ARCHIVO
+    Se utiliza para determinar el tipo de Archivo.
+    
+    EJEMPLO
+    //////////////////////////////////////
+    Programa Ejemplo
+    
+    Tipos
+    Arch_Texto=Archivo de Cadena
+
+    var
+    Arch1:Arch_Texto
+    aux:Cadena
+    
+    Comienza
+    abrir(Arch1,'hola.txt')
+    lectura(Arch1)
+    Mientras No Finde(Arch1) Hacer
+    	comienza
+    	Leer(Arch1,aux)
+    	escribirln(aux)
+    	termina
+    cerrar(Arch1)
+    termina
+    //////////////////////////////////////
+    
+  2.5 ARREGLO
+    Se utiliza para declarar Arreglos.
+
+    EJEMPLO
+    //////////////////////////////////////
+    Programa Ejemplo
+    
+    Tipos
+    Vector=Arreglo [1..56] de Entero
+    Matriz=Arreglo [1..4,1..56] de Entero
+
+    variables
+    i,j:Entero
+    Vec:Vector
+    Mat:Matriz
+    
+    comienza
+    para i<-1 Hasta 56 Hacer
+       comienza
+       vec[i]<-i
+       escribirln(vec[i])
+    para i<-1 hasta 4 hacer
+      para j<-1 hasta 56 hacer
+          Mat[i,j]<-j
+    termina
+    //////////////////////////////////////
+
+  2.6 ESCRIBIRLN
+   Se diferencia del Escribir en que este cuando coloca el
+   dato en la salida estandar hace un salto a la siguiente linea.
+
+   EJEMPLO
+   //////////////////////////////////////
+   Programa Ejemplo
+   
+   comienza
+   escribirln('Hola Mundo!!')
+   termina
+   //////////////////////////////////////
+   
+  2.7 ABRIR
+    Asigna un archivo a una variable
+    
+    EJEMPLO
+    ver 2.4
+
+  2.8 LECTURA
+    Establece el Archivo para apertura de Solo Lectura
+
+    EJEMPLO
+    ver 2.4
+
+  2.9 CERRAR
+    Cierra el Archivo
+    
+    EJEMPLO
+    ver 2.4
+
+  2.10 ESCRITURA
+    Establece el Archivo para apertura de Escritura
+
+    EJEMPLO
+    //////////////////////////////////////
+    Programa Ejemplo
+    
+    Tipos
+    Arch_Texto=Archivo de Cadena
+
+    var
+    Arch1:Arch_Texto
+    aux:Cadena
+    
+    Comienza
+    abrir(Arch1,'hola.txt')
+    Escritura(Arch1)
+    aux:='hola Mundo'
+    Escribir(Arch1,aux)
+    cerrar(Arch1)
+    termina
+    //////////////////////////////////////
+
+3.0 Estructuras
+
+  3.1.1 Estructura Condicional Si
+    
+    DECLARACIÓN:
+    SI Condicion ENTONCES
+        <instrucciones>
+       Sino <Instrucciones>
+   
+    EJEMPLO
+    //////////////////////////////////////
+    programa ifton
+   
+    variables
+    MeEnfermo:Logico
+   
+    comienza
+    Escribir('Salis el sábado? [s/n]')
+    Si LeerTecla='S' entonces Meenfermo<-verdadero
+       Sino MeEnfermo<-falso
+    termina
+    //////////////////////////////////////
+
+  3.1.2 Estructura Condicional Opcion
+  
+    DECLARACIÓN:
+    Opcion <Identificador> De
+	   <Identificador o Cte>:<Instrucciones>
+       termina opcion
+       
+   EJEMPLO
+   //////////////////////////////////////
+    programa ifton
+   
+    variables
+    MeEnfermo:Logico
+   
+    comienza
+    Escribir('Salis el sábado? [s/n]')
+    Opcion LeerTecla de
+    	'S':MeEnfermo<-verdadero
+    	'N':MeEnfermo<-falso
+    termina opcion
+    termina
+    //////////////////////////////////////
+
+  3.2.1 Estructura de Repeticion Para
+
+    DECLARACIÓN:
+    Para <Identificador><-<Inicio> HASTA <tope> Hacer
+           <Instrucciones>
+
+    EJEMPLO
+    //////////////////////////////////////
+    programa ejemplo
+    
+    variables
+    i,FindeMes:entero
+    
+    comienza
+    FinDeMes<-31
+    Para i<-1 hasta FinDeMes hacer
+    	Si LeerTecla='S' entonces Meenfermo<-verdadero
+	       Sino MeEnfermo<-falso
+    termina
+    //////////////////////////////////////
+
+  3.2.2 Estructura de Repeticion Mientras
+  
+    DECLARACIÓN:
+	Mientras <Condicion> Hacer
+		<Instrucciones>
+    
+    EJEMPLO
+    //////////////////////////////////////
+    programa ejemplo
+    
+    variables
+    i,FindeMes:entero
+    
+    comienza
+    FinDeMes<-31
+    i<-1
+    Mientras i <= FinDeMes hacer
+        comienza
+    	Si LeerTecla='S' entonces Meenfermo<-verdadero
+	       Sino MeEnfermo<-falso
+	i<-i+1
+	termina
+    termina
+    //////////////////////////////////////
+
+  3.2.2 Estructura de Repeticion Repetir
+  
+    DECLARACIÓN:    
+      Repetir
+       <Instrucciones>
+      Hasta <Condición>
+      
+    EJEMPLO
+    //////////////////////////////////////
+    programa ejemplo
+    
+    variables
+    i,FindeMes:entero
+    
+    comienza
+    FinDeMes<-31
+    i<-1
+    Repetir
+    	Si LeerTecla='S' entonces Meenfermo<-verdadero
+	       Sino MeEnfermo<-falso
+	i<-i+1
+    Hasta i<31
+    termina
+    //////////////////////////////////////

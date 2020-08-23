@@ -1,0 +1,207 @@
+DOCUMENTACIÓN DE UNIDADES
+
+1.0 UNIDAD CONSOLA
+
+  1.1 LIMPIARLINEA
+    Limpia desde la posición del cursor hasta el final de la linea.
+    
+    DECLARACIÓN  procedimiento LimpiarLinea
+
+    EJEMPLO
+    
+    programa ejemplo
+    //////////////////////////////////////
+    usar
+    Consola
+    
+    Variables
+    	I,J:Entero
+    
+    Comienza
+    Escribir('Esto es un ejemplo')
+    Iar(1,1)
+    LimpiarLinea
+    Termina
+    //////////////////////////////////////
+  
+  1.2 LIMPIARPANTALLA
+    Limpia la pantalla completa
+     
+    DECLARACIÓN  procedimiento LimpiarPantalla
+    
+    EJEMPLO
+    //////////////////////////////////////
+    programa ejemplo
+    
+    usar
+    Consola
+    
+    comienza
+    EscribirLinea('Hola mundo')
+    LeerTecla
+    LimpiarPantalla
+    termina
+    //////////////////////////////////////
+
+  1.3 CURSORGRANDE
+    Muestra el cursor en un tamaño mayor
+    
+    DECLARACIÓN  procedimiento CursorGrande
+    
+    DESCRIPCIÓN  Este procedimiento fabrica un cursor rectangular de gran tamaño
+    (no implementado en unix)
+
+  1.4 OCULTARCURSOR
+    Oculta el cursor
+    
+    DECLARACIÓN  procedimiento OcultarCursor
+    
+  1.5 MOSTRARCURSOR
+    Muestra el cursor
+    
+    DECLARACIÓN  procedimiento MostrarCursor
+
+  1.6 BORRARLINEA
+    Borra la linea en donde esta posicionado el cursor
+    
+    DECLARACIÓN  procedimiento BorrarLinea
+    
+    EJEMPLO
+    //////////////////////////////////////
+    programa OpenEjemplo
+    
+    usar
+    Consola
+    
+    comienza
+    EscribirLinea('hola Mundo')
+    EscribirLinea('hola Mundo')
+    Ira(1,2)
+    LeerTecla
+    BorrarLinea
+    termina
+    //////////////////////////////////////
+
+  1.7 IRA
+    Posiciona el cursor en una cordenada de la pantalla
+    
+    DECLARACIÓN  procedimiento IrA(X:Byte;Y:Byte)
+    
+    DESCRIPCIÓN Posiciona el cursor en la cordenada (X,Y), siendo su origen (1,1)
+    correspondiendose a la parte superior izquierda.
+
+    EJEMPLO
+    //////////////////////////////////////
+    programa ejemplo
+    
+    usar
+    Consola
+    
+    comienza
+    IrA(1,12)
+    EscribirLinea('Hola Tango!!!')
+    termina
+    //////////////////////////////////////
+
+  1.8 INSERTARLINEA
+    Inserta una linea vacia en la posición del cursor
+    
+    DECLARACIÓN procedimiento InsertarLinea
+    
+    EJEMPLO
+    //////////////////////////////////////
+    programa ejemplo
+    
+    usar
+    Consola
+    
+    comienza
+    EscribirLinea('Hola mundo!!!')
+    InsertarLinea
+    Leertecla
+    termina
+    //////////////////////////////////////
+    
+  1.9 TECLAPRESIONADA
+    Chequea si se presiono una tecla
+    
+    DECLARACIÓN funcion TeclaPresionada:Logico
+    
+    DESCRIPCIÓN Las teclas Shift, Alt y Ctrl no son reportadas.
+
+    EJEMPLO
+    //////////////////////////////////////
+    programa ejemplo1
+    
+    usar
+    Consola
+    
+    Comienza
+    Escribir('Esperando a que presione una tecla')
+    repetir
+    Hasta TeclaPresionada
+    termina
+    //////////////////////////////////////
+ 
+  1.10 LEERTECLA
+    Lee el valor de la tecla que se presiono
+    
+    DECLARACIÓN funcion:Char
+    
+    EJEMPLO
+    //////////////////////////////////////
+    programa ejemplolectura
+    
+    usar
+    Consola
+    
+    variables
+    textos:char
+    
+    Comienza
+    EscribirLinea('Presione una tecla: ')
+    textos:=LeerTecla
+    Escribir(textos)
+    termina
+    //////////////////////////////////////
+
+  1.11 FONDOTXT
+    Establece el fondo del texto.
+    
+    DESCRIPCIÓN Procedimiento FondoTxt(Color:Byte)
+    
+    EJEMPLO
+    //////////////////////////////////////
+    programa Ejemplo
+    
+    usar
+    Consola
+    
+    comienza
+    FondoTxt(Verde)
+    escribir('hola')
+    termina
+    //////////////////////////////////////
+    
+  1.12 COLORTXT
+    Establece el color del Texto.
+    
+    DESCRIPCIÓN Procedimiento ColorTxt(Color:Byte)
+    
+    EJEMPLO
+    //////////////////////////////////////
+    programa Ejemplo
+    
+    usar
+    Consola
+    
+    comienza
+    ColorTxt(Verde)
+    escribir('hola')
+    termina
+    //////////////////////////////////////
+
+  1.13 VENTANA
+    Crea una nueva ventana en la pantalla
+    
+    DESCRIPCIÓN Procedimiento Ventana(X1:Byte;Y1:Byte;X2:Byte;Y2:Byte)

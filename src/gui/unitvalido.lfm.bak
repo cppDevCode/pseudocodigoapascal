@@ -1,0 +1,27 @@
+object FrmMensajes: TFrmMensajes
+  AutoSize = True
+  BorderIcons = []
+  BorderStyle = bsDialog
+  Caption = 'Mensajes'
+  ClientHeight = 77
+  ClientWidth = 607
+  FormStyle = fsStayOnTop
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 83
+  Position = poDefault
+  Visible = True
+  HorzScrollBar.Page = 606
+  VertScrollBar.Page = 76
+  Left = 162
+  Height = 77
+  Top = 638
+  Width = 607
+  object Memtrad: TMemo
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ReadOnly = True
+    TabOrder = 0
+    Height = 77
+    Width = 607
+  end
+end

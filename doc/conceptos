@@ -1,0 +1,103 @@
+CONCEPTOS BÁSICOS
+-----------------
+Algoritmo:
+ Manera Formal y Sistemática de presentar la información de un 
+proceso. Secuencia ordenadas de pasos - SIN Ambigüedades -, repetible, que es
+solución de un problema determinado.
+
+Un Algoritmo es:
+	- Preciso
+	- Finito (No puede tener infinitos pasos)
+	- Es independiente del lenguaje de programación que se utilize
+	- Debe estar definido
+
+La definición de un algoritmo debe definir tres etapas: Entrada, Proceso y 
+Salida.
+
+Programa:
+ Un programa es la suma del/de los Algoritmo/s y las especificaciones necesarias
+para que este emita un resultado.
+
+		PROGRAMA = ESTRUCTURA DE DATOS + ESTRUCTURA DE CONTROL
+
+Estructura de Datos
+Los datos que maneja un programa pertenece a un tipo determinado. Este tipo 
+tiene asociado un conjunto de operaciones posibles, Existen tipos Simples o 
+estructurados, ejemplos:
+
+        SIMPLE            ESTRUCTURADOS
+        entero            arreglo
+	real		  Registro
+	
+
+Variable
+Elemento fundamental que representan a los datos a ser procesados mediante un 
+algoritmo.
+
+Su Contenido es variable en el tiempo. Desde el punto de vista de las 
+computadoras, son direcciones de memoria en las que se almacenan los datos que 
+procesa un programa. A cada variable le corresponde su tipo; puede haber mas de
+una variable de un mismo tipo, pero a cada variable le corresponde un unico tipo.
+
+Identificador
+Nombre unico asociado a cada variable.
+
+Ejemplos:
+	IDENTIFICADOR	TIPO
+	Hola		Cadena
+	Numero		Entero
+	Verdad		Logico
+	
+Estructuras de control
+Son construcciones logicas que dirigen el flujo de acciones que efectuara el 
+procesador sobre los datos que maneja un programa, los que estaran organizado en
+estructuras de datos.
+Existen tres estructuras basicas de control, que a su vez puede convinarce entre
+si para formar estructuras mas complejas. Ellas son Secuenciacion, seleccion e
+iteración.
+  Al hablar de estructuras de control se hace necesario definir que es un enunciado y una condición.
+
+Enunciado: Sentencia o instrucción que representa una operación elemental sobre ninguna, una o varias variables.
+
+  Según el número de acciones que se realizan sobre ésta/s, los enunciados se clásifican en nulos (ninguna acción), simple (Una sola acción) o compuesto (más de una).
+  La operación de asignación es un enunciado simple, que se representa con el simbolo <-. El formato de dicho enunciado es:
+ID_VARIABLE <- EXPRESIÓN
+
+  Esto significa que el valor de la expresión se "almacena" en la variable identificada por el "ID_VARIABLE"
+Ejemplos:
+       mes<-'agosto'
+       ano<-2006
+       pi<-3.14159
+       Escierto<-verdadero
+
+Ejemplos
+       Escribir x
+       Leer x
+       x <-x+2
+
+Vimos que un enunciado es compuesto si implica más de una operación sobre una o más variables. Al Tratarse de un enunciado, debemos agrupar dichas acciones para su tratamiento como único. Esto se logra encerrando las mismas entre parentesis. Las metapalabras utilizadas para este fin, son Comienza y Termina.
+Ejemplos:
+
+Comienza
+leer x
+y<- x + 3
+escribir x,y
+escribir 'Se termino'
+termina
+
+Condicion: Expresión lógica, la que por su condición de tal, podra tomar los valores de Verdadero o Falso.
+Ejemplos:
+
+x<9
+hola=chau
+(a>b)y(b>c)
+
+Veamos entonces cada una de las estructuras de control, con ejemplos de aplicación, simbolizando con e los enunciados y con c las condiciones.
+
+Secuenciación: Sucesión de enunciados que se ejecutan uno a continuación de otro.
+ e0
+ e1
+ e...
+ en
+
+Selección: Sentencia que evalua una expresión, y en función de los valores de esta, dirige el flujo del proceso.

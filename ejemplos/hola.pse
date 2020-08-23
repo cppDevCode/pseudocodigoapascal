@@ -1,0 +1,17 @@
+Programa hola_mundo
+
+usar
+Consola
+
+var
+h:Cadena 25
+j:Cadena
+
+comienza
+FondoTxt Blanco
+ColorTxt Black
+Escribir 'Gracias por utilizar PseudoTrans!!!'
+Si TeclaPresionada Entonces 
+     Exit
+     Sino Escribirln 'chau'
+termina
