@@ -1,11 +1,11 @@
 [Desktop Entry]
-Name=Pseudotrans
-Name[de]=Pseudotrans
-Name[fr]=Pseudotrans
-Name[es]=Pseudotrans
+Name=PseudocodigoAPascal
+Name[de]=PseudocodigoAPascal
+Name[fr]=PseudocodigoAPascal
+Name[es]=PseudocodigoAPascal
 Comment=Convierte pseudo codigo en codigo fuente
-Exec=/usr/bin/pseudotrans
-Icon=pseudotrans.png
+Exec=/usr/bin/pseudocodigoapascal
+Icon=pseudocodigoapascal.png
 Terminal=false
 Type=Application
 Categories=GTK;GNOME;Application;Development;
